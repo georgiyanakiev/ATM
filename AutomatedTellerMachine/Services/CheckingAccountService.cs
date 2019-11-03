@@ -20,12 +20,8 @@ namespace AutomatedTellerMachine.Services
             
             var accountNumber = (123456 + db.CheckingAccounts.Count()).ToString
                 ().PadLeft(10, '0');
-            var CheckingAccount = new CheckingAccount
-            {
-                FirstName = fristName,
-                LastName = lastName,
-                AccountNumber = accountNumber,
-                Balance = 0,
+            var CheckingAccount = new CheckingAccount { FirstName = fristName, LastName = lastName, AccountNumber = accountNumber,
+                Balance = InitialBalance,
                 ApplicationUserId = userId
             };
             db.CheckingAccounts.Add(CheckingAccount);

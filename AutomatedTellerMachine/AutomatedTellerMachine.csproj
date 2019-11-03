@@ -190,6 +190,10 @@
     <Compile Include="Migrations\201911021917037_AccountNumberChanges.designer.cs">
       <DependentUpon>201911021917037_AccountNumberChanges.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911030041112_pin.cs" />
+    <Compile Include="Migrations\201911030041112_pin.designer.cs">
+      <DependentUpon>201911030041112_pin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CheckingAccount.cs" />
@@ -322,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911021917037_AccountNumberChanges.resx">
       <DependentUpon>201911021917037_AccountNumberChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911030041112_pin.resx">
+      <DependentUpon>201911030041112_pin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
