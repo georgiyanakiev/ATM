@@ -1,5 +1,6 @@
 ﻿using AutomatedTellerMachine.Models;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,9 @@ namespace AutomatedTellerMachine.Controllers
             var checkingAccountId = db.CheckingAccounts.Where(c => c.ApplicationUserId ==
             userId).First().Id;
             ViewBag.CheckingAccountid = checkingAccountId;
+            var manager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var user = manager.FindById(userId);
+            ViewBag.Pin = user.Pin;
             return View();
         }
         [ActionName("about-this-atm")]

@@ -9,7 +9,7 @@ namespace AutomatedTellerMachine.Models
 {
     public class CheckingAccount
     {   
-       
+        [Key]
         public int Id { get; set; }
         [Required]
         [StringLength(10)]
