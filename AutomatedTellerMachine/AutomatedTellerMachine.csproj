@@ -213,6 +213,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\General-Target1Thumb.jpg" />
     <Content Include="Content\Images\hero_secondary_atm_and_cam.jpg" />
     <Content Include="Content\Images\web-retail-atm-image-card-automated-teller-machine.png" />
     <Content Include="favicon.ico" />
@@ -248,6 +249,8 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -308,6 +311,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Transaction\Deposit.cshtml" />
     <Content Include="Views\CheckingAccount\List.cshtml" />
+    <Content Include="Views\Home\_ContactThanks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
