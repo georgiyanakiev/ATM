@@ -11,7 +11,7 @@ namespace AutomatedTellerMachine.Controllers
 {
     public class HomeController : Controller
     {
-        private IApplicationDbContext db = new IApplicationDbContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
         [Authorize]
         public ActionResult Index()
         {   

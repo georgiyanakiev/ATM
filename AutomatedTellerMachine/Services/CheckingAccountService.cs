@@ -27,5 +27,14 @@ namespace AutomatedTellerMachine.Services
             db.CheckingAccounts.Add(CheckingAccount);
             db.SaveChanges();
         }
+
+        public void UpdateBalance(int checkingAccountId)
+        {
+            var checkingAccount = db.CheckingAccounts.Where(c => c.Id ==
+            checkingAccountId).First();
+            checkingAccount.Balance = db.Transactions.Where(c => c.CheckingAccountId ==
+            checkingAccountId).Sum(c =>c.Amount);
+            db.SaveChanges();
+        }
     }
 }

@@ -47,7 +47,8 @@ namespace AutomatedTellerMachine.Models
                 CheckingAccountId = 1,
                 Amount = 25
             });
-            Assert.AreEqual(25, checkingAccount.Balance);
+            
+           Assert.AreEqual(25, checkingAccount.Balance);
         }
     }
 }

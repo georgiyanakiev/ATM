@@ -16,6 +16,7 @@ namespace AutomatedTellerMachine.Models
     }
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>,
         IApplicationDbContext
+        
     {   
         
 
@@ -30,9 +31,9 @@ namespace AutomatedTellerMachine.Models
             return new ApplicationDbContext();
         }
 
-        public DbSet<CheckingAccount> CheckingAccounts { get; set; }
+        public IDbSet<CheckingAccount> CheckingAccounts { get; set; }
 
-        public DbSet<Transaction> Transactions { get; set; }
+        public IDbSet<Transaction> Transactions { get; set; }
     }
 
     public class FakeApplicationDbContext : IApplicationDbContext
