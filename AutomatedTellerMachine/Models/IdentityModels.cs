@@ -20,17 +20,17 @@ namespace AutomatedTellerMachine.Models
         public string Pin { get; set; }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class IApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
+        public IApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
             
         }
 
-        public static ApplicationDbContext Create()
+        public static IApplicationDbContext Create()
         {
-            return new ApplicationDbContext();
+            return new IApplicationDbContext();
         }
 
         public  DbSet<CheckingAccount> CheckingAccounts { get; set; }

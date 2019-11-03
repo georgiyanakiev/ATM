@@ -13,7 +13,7 @@ namespace AutomatedTellerMachine.Controllers
     public class CheckingAccountController : Controller
     {
 
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private IApplicationDbContext db = new IApplicationDbContext();
 
         // GET: CheckingAccount
         public ActionResult Index()

@@ -9,7 +9,7 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<AutomatedTellerMachine.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<AutomatedTellerMachine.Models.IApplicationDbContext>
     {
         public Configuration()
         {
@@ -17,7 +17,7 @@
             ContextKey = "AutomatedTellerMachine.Models.ApplicationDbContext";
         }
 
-        protected override void Seed(AutomatedTellerMachine.Models.ApplicationDbContext context)
+        protected override void Seed(AutomatedTellerMachine.Models.IApplicationDbContext context)
         {
 
             var userStore = new UserStore<ApplicationUser>(context);

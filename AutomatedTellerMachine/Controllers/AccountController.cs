@@ -159,7 +159,7 @@ namespace AutomatedTellerMachine.Controllers
                     UserManager.AddClaim(user.Id, new Claim(ClaimTypes.GivenName,
                         model.FirstName));
                     var service = new CheckingAccountService(HttpContext.GetOwinContext
-                        ().Get<ApplicationDbContext>());
+                        ().Get<IApplicationDbContext>());
                     service.CreateCheckingAccount(model.FirstName, model.LastName, user.Id, 0);
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
@@ -382,7 +382,7 @@ namespace AutomatedTellerMachine.Controllers
                     {
 
                         var service = new CheckingAccountService(HttpContext.GetOwinContext
-                        ().Get<ApplicationDbContext>());
+                        ().Get<IApplicationDbContext>());
                         service.CreateCheckingAccount("Facebook","User", user.Id, 0);
                         await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                         return RedirectToLocal(returnUrl);
